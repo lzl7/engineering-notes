@@ -3,6 +3,9 @@ The notes for engineering related stuff, like learning notes, practice notes.
 # System
 * [Stateless vs Stateful Design](system/design-stateless-vs-stateful.md), there are several comparions about these two system design.
 
+# Programming Languages
+* [C#](programming-languages/csharp/csharp.md), there are some notes and resources about C#.
+
 # Skills/Tooling
 Following will list couples of tooling skills for different purposes.
 
