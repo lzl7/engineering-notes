@@ -53,10 +53,13 @@ Usually, stateful design highly depends on a good DevOps system to make sure the
 * Transactions involved area, like online shopping
 * Databases
 
+### [Design Tips](design-stateful-system.md)
+This [doc](design-stateful-system.md) will introduce several practices/solutions for designing stateful system.
+
 ## Stateless and Stateful Design
 Whether the service designed as stateless or stateful is totally a trade-off, each design has its own advantages and disadvantages and good fit in different scenarios. However, they are not really exclusive to each other, in some scenarios we need to combine both. Take HTTP and TCP as an example, TCP is transaction-oriented 'stateful' design while HTTP is more like a stateless design based on the TCP.
 
-> TODO details for stateful design and related trade-off solutions
+In the real system, you might have the front-tier like the gateway acts as the stateless and the application tier service as the stateful.
 
 References:
 * ["Building Scalable Stateful" by Caitie MaCaffrey](https://www.youtube.com/watch?v=H0i_bXKwujQ)
