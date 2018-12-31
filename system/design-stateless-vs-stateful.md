@@ -61,5 +61,5 @@ Whether the service designed as stateless or stateful is totally a trade-off, ea
 
 In the real system, you might have the front-tier like the gateway acts as the stateless and the application tier service as the stateful.
 
-References:
+**References:**
 * ["Building Scalable Stateful" by Caitie MaCaffrey](https://www.youtube.com/watch?v=H0i_bXKwujQ)

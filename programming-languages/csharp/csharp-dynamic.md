@@ -88,7 +88,7 @@ However, using `object` will havce the disadvantages are:
 
 There are some suggestons for `var`: [When to Use and Not Use var in C#](https://intellitect.com/when-to-use-and-not-use-var-in-c/).
 
-References:
+**References:**
 * [Understanding the Dynamic Keyword in C# 4](https://visualstudiomagazine.com/Articles/2011/02/01/Understanding-the-Dynamic-Keyword-in-C4.aspx)
 * [Why is reflection slow?](https://mattwarren.org/2016/12/14/Why-is-Reflection-slow/) Matt Warren describes very detail about why the reflection slow and how to improve the performance
     * [List of .NET Performance books](https://mattwarren.org/resources/)
