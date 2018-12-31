@@ -42,4 +42,4 @@ Example for merge:
 
 ## Example:
 
-![Merge pdf example](/img/example-merge-pdf.png)
+![Merge pdf example](../img/example-merge-pdf.png)
