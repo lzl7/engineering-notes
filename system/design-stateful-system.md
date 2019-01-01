@@ -151,3 +151,4 @@ Stateful design approach are widely applied in the distrbuted database or file s
 * [Making the Case for Building Scalable Stateful Services in the Modern Era](http://highscalability.com/blog/2015/10/12/making-the-case-for-building-scalable-stateful-services-in-t.html)
 * [PingPop (from Uber)](https://eng.uber.com/intro-to-ringpop/)
 * [Scuba (from Facebook)](https://research.fb.com/wp-content/uploads/2016/11/scuba-diving-into-data-at-facebook.pdf)
+* [Orlens (from Microsoft)](https://www.microsoft.com/en-us/research/project/orleans-virtual-actors/?from=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fprojects%2Forleans%2F)
