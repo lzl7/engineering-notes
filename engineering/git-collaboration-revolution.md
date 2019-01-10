@@ -46,7 +46,7 @@ The fork feature perfectly resolves all these issues. With cloning, the developm
 ## Further thinking
 Given that we have the fork feature for the repository which enables great flexibility for the project development. There are basically two ways to do the project management: fork-based repositories and component-based repositories. Those are totally two different philosophies, each has its own advantages and application scenarios. We might have the quesion: ***when should we use which approach?***
 
-> TODO: in the future, I will find the time to discuss the trade-off between them and some suggestions in the real project development.
+There are some suggestions in the real project development using Git, check [Project Management - Forking vs Multiple Repos in Git](git-forking-vs-multiple-repos.md).
 
 **References**:
 * [git clone vs fork](http://bryanpendleton.blogspot.com/2014/07/git-clone-vs-fork.html)
