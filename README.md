@@ -9,6 +9,7 @@ The notes for engineering related stuff, like learning notes, practice notes.
 * [Projects Management in Git](engineering/git-forking-vs-multiple-repos.md), there are two ways to manage the projects and they both has advantages and disadvantages.
 * [Code Review](engineering/code-review.md), code review has a lot of great benefits for both the team and engineer. In this note, it will list why we should do the code review, how should we do the code review.
 * [How to engage new work](engineering/how-to-engage-new-work.md), several tips for ramping up on the new jobs in new team or new projects.
+* [Is Dictionary O(1)?](engineering/is-dictionary-o-1.md), interesting things about dictionary (i.e. hash data structure) in practice.
 
 # Programming Languages
 * [C#](programming-languages/csharp/csharp.md), there are some notes and resources about C#.
