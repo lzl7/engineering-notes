@@ -17,3 +17,7 @@ There is an interesting question: how could the attacker create the perfect data
 > TODO: to discuss more about the possible attack cases
 > How about adding runtime randomize for the hash function？
 > What should we do to avoid the potential attack?
+
+There are some further readings about the attack example, and some suggestion about preventing attack:
+- [HashDoS: DoS using Hash Collision](http://www.shilpikhariwal.com/2012/03/hashdos-dos-using-hash-collision.html)
+- [Application vulnerability due to Non Random Hash Functions](https://stackoverflow.com/questions/8669946/application-vulnerability-due-to-non-random-hash-functions)
