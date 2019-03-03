@@ -46,6 +46,11 @@ However, the hash tables is slow comparing to offset access. How V8 works to imp
 The above object structure in v8 is from this [blog](https://github.com/thlorenz/v8-perf/blob/master/data-types.md#objects) which describes a lot of detail info there.
 
 * ***In-object slack tracking***:
+In-object slack tracking is used to determine an appropriate size for instances of each constructor.
+
+Initially, objects allocated by a constructor are given large amount of memory: enough for 32 fast properties stored within the object. After allocating couple objects (like 8) in the same constructor, V8 check the maximum size of the initial object by traversing transition tree from the initial map. Then new object created by the same constructor will be allocated use that amount of memory, and also the initial objects are resized.
+
+What if a new property is added? Handled by allocating an overflow array to store extra properties. And the overflow array can be reallocated with larger size as new properties added.
 
 ### Memory Model
 
