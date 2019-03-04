@@ -32,7 +32,7 @@ Hash tables is good fit to the store JavaScirpt which basically maps from string
 
 However, the hash tables is slow comparing to offset access. How V8 works to improve the performance?
 
-* ***In-object fast properties***:
+***In-object fast properties***:
     
     The scenario it want to resolve is to reduce the access type for most common objects. 
     
@@ -45,12 +45,31 @@ However, the hash tables is slow comparing to offset access. How V8 works to imp
 ![Object Structure](../img/v8-object-structure.png)
 The above object structure in v8 is from this [blog](https://github.com/thlorenz/v8-perf/blob/master/data-types.md#objects) which describes a lot of detail info there.
 
-* ***In-object slack tracking***:
+***In-object slack tracking***:
 In-object slack tracking is used to determine an appropriate size for instances of each constructor.
 
 Initially, objects allocated by a constructor are given large amount of memory: enough for 32 fast properties stored within the object. After allocating couple objects (like 8) in the same constructor, V8 check the maximum size of the initial object by traversing transition tree from the initial map. Then new object created by the same constructor will be allocated use that amount of memory, and also the initial objects are resized.
 
 What if a new property is added? Handled by allocating an overflow array to store extra properties. And the overflow array can be reallocated with larger size as new properties added.
+
+***Method and Prototypes***
+C++ uses the virtual table for handling dynamic functions and reduce the memory cast, V8 uses similar strategy to handle the functions objects/properties: maps. It adds a new descriptor: constant functions. A constant function descriptor refers that the object has a property and the value is stored within descriptor instead of in the object.
+
+`Prototype` is another way in javascript used to share properties. Every constructor has a prototype associated to it. 
+
+***Numbered properties: fast elements***
+`Element` stores property with a non-negative integer key. Elements are stored separately from named propertes, in a contiguous array. Each object has one pointer to its elements and the maps use the elements kind to determine how elements are stored. Three kinds:
+- Fast small integers
+  - 31-bit signed integers
+  - If range out of it, upgrade to fast double
+- Fast doubles
+  - Stored as unboxed representation
+- Fast values
+  - String or object
+
+If assign value to an index that is way past the range of elements array, V8 downgrade it to dictionary mode.
+
+Arrary can be stored by: fast elements and dictionary elements. Fast elements is contiguous storage buffer and smaller (<64k) while dictionary elements use the hash table storage and is sparse and slow. 
 
 ### Memory Model
 
@@ -60,7 +79,12 @@ What if a new property is added? Handled by allocating an overflow array to stor
 
 ### New compiler infrastructure
 
+
+## Map
+![](../img/V8-Engine-Note-Map.png)
+
 ## References
+- http://jayconrod.com/posts/52/a-tour-of-v8-object-representation
 - https://github.com/thlorenz/v8-perf
 - http://jayconrod.com/tags/v8
 - https://github.com/v8/v8/wiki
