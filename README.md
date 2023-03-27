@@ -12,7 +12,7 @@ The notes for engineering related stuff, like learning notes, practice notes.
 * [Is Dictionary O(1)?](engineering/is-dictionary-o-1.md), interesting things about dictionary (i.e. hash data structure) in practice.
 
 # Programming Languages
-* [C#](programming-languages/csharp/csharp.md), there are some notes and resources about C#.
+* [C#](programming-languages/csharp/csharp.md), notes and resources about C#.
 
 # Toolings
 Following will list a couple of toolings:
